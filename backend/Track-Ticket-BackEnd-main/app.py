@@ -358,7 +358,7 @@ def exit_and_verify():
                 return jsonify({'status': 'error', 'message': f'Error updating status: {str(e)}'}), 500
         else:
             # Log a notification for non-verified users
-            notification_message = f'Person with image {profile} is not verified.'
+            notification_message = f'Person with image {profile} is not verified!.'
             insert_notification(notification_message)
             return jsonify({'status': 'not_verified', 'message': 'Person not verified, notification logged.'})
     else:
