@@ -39,7 +39,7 @@ export default function Login() {
     try {
       const snapShot = await firestore().collection('conductor').get();
       if (snapShot.empty) {
-        showToast('No user found');
+        showToast('No user found!');
         return;
       };
       let userDoc = snapShot.docs.find(doc => {
